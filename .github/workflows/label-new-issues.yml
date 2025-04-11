@@ -1,12 +1,9 @@
 name: Label New Issues as "To Do"
-
 on:
   issues:
     types: [opened]
-
 permissions:
-  issues: write
-
+  issues: write  # Explicitly grants write permission to manage issues
 jobs:
   label_issue:
     runs-on: ubuntu-latest
