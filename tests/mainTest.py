@@ -1,6 +1,6 @@
 from main import printNums
 
-def tests():
-  printNums(0)
-  printNums(10)
-  printNums(1)
+def test_printNums(capsys):
+    printNums(3)
+    captured = capsys.readouterr()
+    assert captured.out == "0\n1\n2\n"
